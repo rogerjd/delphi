@@ -17,8 +17,13 @@ type
     DataSetProvider1: TDataSetProvider;
     Button1: TButton;
     Button2: TButton;
+    Button3: TButton;
+    Button4: TButton;
+    GroupBox1: TGroupBox;
     procedure Button2Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
+    procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,6 +47,16 @@ var
   mr: integer;
 begin
   mr := MessageDlg('test', mtInformation, [mbOk], 0);
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  ClientDataSet1.Open();
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+  ClientDataSet1.Close();
 end;
 
 end.

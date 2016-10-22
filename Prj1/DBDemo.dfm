@@ -1,9 +1,9 @@
-object Form1: TForm1
-  Left = 192
-  Top = 124
+object frmDBDemo: TfrmDBDemo
+  Left = 250
+  Top = 287
   Width = 979
   Height = 563
-  Caption = 'Form1'
+  Caption = 'frmDBDemo'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -44,23 +44,31 @@ object Form1: TForm1
     TabOrder = 2
     OnClick = Button2Click
   end
-  object Button3: TButton
+  object GroupBox1: TGroupBox
     Left = 304
-    Top = 120
-    Width = 75
-    Height = 25
-    Caption = 'Open'
+    Top = 88
+    Width = 305
+    Height = 105
+    Caption = 'Table'
     TabOrder = 3
-    OnClick = Button3Click
-  end
-  object Button4: TButton
-    Left = 392
-    Top = 120
-    Width = 75
-    Height = 25
-    Caption = 'Button4'
-    TabOrder = 4
-    OnClick = Button4Click
+    object Button3: TButton
+      Left = 6
+      Top = 16
+      Width = 50
+      Height = 25
+      Caption = 'Open'
+      TabOrder = 0
+      OnClick = Button3Click
+    end
+    object Button4: TButton
+      Left = 62
+      Top = 16
+      Width = 50
+      Height = 25
+      Caption = 'Close'
+      TabOrder = 1
+      OnClick = Button4Click
+    end
   end
   object Database1: TDatabase
     AliasName = 'DBDEMOS'

@@ -20,8 +20,20 @@ object frmMain: TfrmMain
     object File1: TMenuItem
       Caption = 'File'
       object Database1: TMenuItem
-        Caption = 'Database'
+        Caption = '&Database'
         OnClick = Database1Click
+      end
+      object hreading1: TMenuItem
+        Caption = '&Threading'
+      end
+      object ListStrList1: TMenuItem
+        Caption = 'DataStructs'
+        OnClick = ListStrList1Click
+      end
+      object Exit1: TMenuItem
+        Caption = 'E&xit'
+        ShortCut = 16472
+        OnClick = Exit1Click
       end
     end
   end
