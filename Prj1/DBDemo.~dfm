@@ -1,9 +1,9 @@
-object Form1: TForm1
+object frmDBDemo: TfrmDBDemo
   Left = 250
   Top = 287
   Width = 979
   Height = 563
-  Caption = 'Form1'
+  Caption = 'frmDBDemo'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
