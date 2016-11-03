@@ -14,9 +14,9 @@ object frmDBDemo: TfrmDBDemo
   PixelsPerInch = 96
   TextHeight = 13
   object DBGrid1: TDBGrid
-    Left = 304
-    Top = 200
-    Width = 320
+    Left = 8
+    Top = 160
+    Width = 313
     Height = 120
     DataSource = DataSource1
     TabOrder = 0
@@ -40,27 +40,28 @@ object frmDBDemo: TfrmDBDemo
     Top = 400
     Width = 75
     Height = 25
+    Cancel = True
     Caption = 'E&xit'
     TabOrder = 2
     OnClick = Button2Click
   end
   object GroupBox1: TGroupBox
-    Left = 304
-    Top = 88
-    Width = 305
+    Left = 8
+    Top = 48
+    Width = 313
     Height = 105
-    Caption = 'Table'
+    Caption = 'Employees'
     TabOrder = 3
-    object btnOpenTbl: TButton
+    object btnEmpTblOpen: TButton
       Left = 6
       Top = 16
       Width = 50
       Height = 25
       Caption = 'Open'
       TabOrder = 0
-      OnClick = btnOpenTblClick
+      OnClick = btnEmpTblOpenClick
     end
-    object btnCloseTbl: TButton
+    object btnEmpTblClose: TButton
       Left = 62
       Top = 16
       Width = 50
@@ -68,7 +69,7 @@ object frmDBDemo: TfrmDBDemo
       Caption = 'Close'
       Enabled = False
       TabOrder = 1
-      OnClick = btnCloseTblClick
+      OnClick = btnEmpTblCloseClick
     end
     object edtFilterTbl: TEdit
       Left = 16
@@ -87,22 +88,110 @@ object frmDBDemo: TfrmDBDemo
       OnClick = btnFilterTblClick
     end
   end
+  object GroupBox2: TGroupBox
+    Left = 352
+    Top = 48
+    Width = 225
+    Height = 105
+    Caption = 'Results'
+    TabOrder = 4
+    object Button8: TButton
+      Left = 60
+      Top = 20
+      Width = 105
+      Height = 25
+      Caption = 'Employee Skills'
+      TabOrder = 0
+    end
+    object Button6: TButton
+      Left = 59
+      Top = 60
+      Width = 107
+      Height = 25
+      Caption = 'Skill Employees'
+      TabOrder = 1
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 616
+    Top = 48
+    Width = 313
+    Height = 105
+    Caption = 'Skills'
+    TabOrder = 5
+    object btnSkillTblOpen: TButton
+      Left = 6
+      Top = 16
+      Width = 50
+      Height = 25
+      Caption = 'Open'
+      TabOrder = 0
+      OnClick = btnEmpTblOpenClick
+    end
+    object btnSkillTblClose: TButton
+      Left = 62
+      Top = 16
+      Width = 50
+      Height = 25
+      Caption = 'Close'
+      Enabled = False
+      TabOrder = 1
+      OnClick = btnEmpTblCloseClick
+    end
+    object Edit1: TEdit
+      Left = 16
+      Top = 72
+      Width = 121
+      Height = 21
+      TabOrder = 2
+    end
+    object Button5: TButton
+      Left = 144
+      Top = 72
+      Width = 75
+      Height = 25
+      Caption = '&Filter'
+      TabOrder = 3
+      OnClick = btnFilterTblClick
+    end
+  end
+  object DBGrid2: TDBGrid
+    Left = 616
+    Top = 168
+    Width = 320
+    Height = 120
+    DataSource = DataSource1
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object DBListBox1: TDBListBox
+    Left = 352
+    Top = 160
+    Width = 225
+    Height = 121
+    ItemHeight = 13
+    TabOrder = 7
+  end
   object Database1: TDatabase
     AliasName = 'DBDEMOS'
     DatabaseName = 'Database1'
     SessionName = 'Default'
-    Left = 80
-    Top = 64
+    Left = 8
+    Top = 8
   end
   object Query1: TQuery
     DatabaseName = 'Database1'
     SQL.Strings = (
       'select *'
       ' from'
-      '  animals'
-      'where name like :p')
-    Left = 120
-    Top = 64
+      '  employee'
+      'where lastname like :p')
+    Left = 48
+    Top = 8
     ParamData = <
       item
         DataType = ftString
@@ -125,13 +214,13 @@ object frmDBDemo: TfrmDBDemo
     Aggregates = <>
     Params = <>
     ProviderName = 'DataSetProvider1'
-    Left = 208
-    Top = 64
+    Left = 136
+    Top = 8
   end
   object DataSetProvider1: TDataSetProvider
     DataSet = Query1
     Constraints = True
-    Left = 160
-    Top = 64
+    Left = 88
+    Top = 8
   end
 end

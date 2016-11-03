@@ -4,7 +4,8 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Provider, DBClient, DB, Grids, DBGrids, DBTables, StdCtrls;
+  Dialogs, Provider, DBClient, DB, Grids, DBGrids, DBTables, StdCtrls,
+  DBCtrls;
 
 type
   TfrmDBDemo = class(TForm)
@@ -17,15 +18,25 @@ type
     DataSetProvider1: TDataSetProvider;
     Button1: TButton;
     Button2: TButton;
-    btnOpenTbl: TButton;
-    btnCloseTbl: TButton;
+    btnEmpTblOpen: TButton;
+    btnEmpTblClose: TButton;
     GroupBox1: TGroupBox;
     edtFilterTbl: TEdit;
     btnFilterTbl: TButton;
+    GroupBox2: TGroupBox;
+    GroupBox3: TGroupBox;
+    btnSkillTblOpen: TButton;
+    btnSkillTblClose: TButton;
+    Edit1: TEdit;
+    Button5: TButton;
+    DBGrid2: TDBGrid;
+    DBListBox1: TDBListBox;
+    Button8: TButton;
+    Button6: TButton;
     procedure Button2Click(Sender: TObject);
     procedure Button1Click(Sender: TObject);
-    procedure btnOpenTblClick(Sender: TObject);
-    procedure btnCloseTblClick(Sender: TObject);
+    procedure btnEmpTblOpenClick(Sender: TObject);
+    procedure btnEmpTblCloseClick(Sender: TObject);
     procedure btnFilterTblClick(Sender: TObject);
   private
     { Private declarations }
@@ -54,20 +65,20 @@ begin
   mr := MessageDlg('test', mtInformation, [mbOk], 0);
 end;
 
-procedure TfrmDBDemo.btnOpenTblClick(Sender: TObject);
+procedure TfrmDBDemo.btnEmpTblOpenClick(Sender: TObject);
 begin
-  btnOpenTbl.Enabled := False;
+  btnEmpTblOpen.Enabled := False;
   SetTblFilter();
   ClientDataSet1.Open();
-  ShowMessage(BoolToStr(Database1.Connected));
-  btnCloseTbl.Enabled := True;
+//  ShowMessage(BoolToStr(Database1.Connected));
+  btnEmpTblClose.Enabled := True;
 end;
 
-procedure TfrmDBDemo.btnCloseTblClick(Sender: TObject);
+procedure TfrmDBDemo.btnEmpTblCloseClick(Sender: TObject);
 begin
-  btnCloseTbl.Enabled := False;
+  btnEmpTblClose.Enabled := False;
   ClientDataSet1.Close();
-  btnOpenTbl.Enabled := True;
+  btnEmpTblOpen.Enabled := True;
 end;
 
 procedure TfrmDBDemo.btnFilterTblClick(Sender: TObject);
@@ -75,6 +86,8 @@ begin
   ClientDataSet1.Close(); //must close, for new filter
   SetTblFilter();
   ClientDataSet1.Open();
+
+//  ClientDataSet1.ap
 (*
   ShowMessage(BoolToStr(Query1.Active));
   ShowMessage(BoolToStr(Database1.Connected));
