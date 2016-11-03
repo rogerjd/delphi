@@ -51,40 +51,40 @@ object frmDBDemo: TfrmDBDemo
     Height = 105
     Caption = 'Table'
     TabOrder = 3
-    object Button3: TButton
+    object btnOpenTbl: TButton
       Left = 6
       Top = 16
       Width = 50
       Height = 25
       Caption = 'Open'
       TabOrder = 0
-      OnClick = Button3Click
+      OnClick = btnOpenTblClick
     end
-    object Button4: TButton
+    object btnCloseTbl: TButton
       Left = 62
       Top = 16
       Width = 50
       Height = 25
       Caption = 'Close'
+      Enabled = False
       TabOrder = 1
-      OnClick = Button4Click
+      OnClick = btnCloseTblClick
     end
-    object Edit1: TEdit
+    object edtFilterTbl: TEdit
       Left = 16
       Top = 72
       Width = 121
       Height = 21
       TabOrder = 2
-      Text = 'Edit1'
     end
-    object Button5: TButton
+    object btnFilterTbl: TButton
       Left = 144
       Top = 72
       Width = 75
       Height = 25
-      Caption = 'Filter'
+      Caption = '&Filter'
       TabOrder = 3
-      OnClick = Button5Click
+      OnClick = btnFilterTblClick
     end
   end
   object Database1: TDatabase
@@ -99,8 +99,8 @@ object frmDBDemo: TfrmDBDemo
     SQL.Strings = (
       'select *'
       ' from'
-      '  employee'
-      'where lastname like :p')
+      '  animals'
+      'where name like :p')
     Left = 120
     Top = 64
     ParamData = <
@@ -108,7 +108,6 @@ object frmDBDemo: TfrmDBDemo
         DataType = ftString
         Name = 'p'
         ParamType = ptInput
-        Value = '%'
       end>
   end
   object Table1: TTable
