@@ -11,19 +11,14 @@ File_8=SourceModule,'C:\Users\roger\DelphiPrjs\DBDemo.pas',0,1,1,1,1,0,1
 File_9=SourceModule,'C:\Program Files (x86)\Borland\Delphi6\Demos\Db\FishFact\Ffactwin.pas',0,1,25,34,21,0,0
 
 [Modules]
-Module0=C:\Users\roger\DelphiPrjs\Prj1\DBDemo.pas
-Module1=C:\Users\roger\DelphiPrjs\Prj1\MainForm.pas
-Module2=C:\Users\roger\DelphiPrjs\Prj1\LangUnit.pas
-Module3=C:\Users\roger\DelphiPrjs\Prj1\frmDemoUnit.pas
+Module0=C:\Users\roger\DelphiPrjs\Prj1\frmDemoUnit.pas
+Module1=C:\Users\roger\DelphiPrjs\Prj1\LangUnit.pas
+Module2=C:\Users\roger\DelphiPrjs\Prj1\MainForm.pas
+Module3=C:\Users\roger\DelphiPrjs\Prj1\DBDemo.pas
 Count=4
 EditWindowCount=1
 
-[C:\Users\roger\DelphiPrjs\Prj1\DBDemo.pas]
-ModuleType=SourceModule
-FormState=1
-FormOnTop=0
-
-[C:\Users\roger\DelphiPrjs\Prj1\MainForm.pas]
+[C:\Users\roger\DelphiPrjs\Prj1\frmDemoUnit.pas]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
@@ -33,7 +28,12 @@ ModuleType=SourceModule
 FormState=1
 FormOnTop=0
 
-[C:\Users\roger\DelphiPrjs\Prj1\frmDemoUnit.pas]
+[C:\Users\roger\DelphiPrjs\Prj1\MainForm.pas]
+ModuleType=SourceModule
+FormState=1
+FormOnTop=0
+
+[C:\Users\roger\DelphiPrjs\Prj1\DBDemo.pas]
 ModuleType=SourceModule
 FormState=1
 FormOnTop=0
@@ -48,7 +48,7 @@ FormOnTop=0
 
 [EditWindow0]
 ViewCount=4
-CurrentView=2
+CurrentView=3
 View0=0
 View1=1
 View2=2

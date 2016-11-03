@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 97
-  Top = 148
+  Left = 233
+  Top = 143
   Width = 488
   Height = 281
   ActiveControl = btnList
@@ -83,6 +83,15 @@ object Form1: TForm1
       333333333333888888F3333F00003333330000003333333333338FFFF8F3333F
       0000}
     NumGlyphs = 2
+  end
+  object Button1: TButton
+    Left = 248
+    Top = 32
+    Width = 75
+    Height = 25
+    Caption = 'String'
+    TabOrder = 5
+    OnClick = Button1Click
   end
   object SQLConnection1: TSQLConnection
     ConnectionName = 

@@ -1,0 +1,43 @@
+unit Emp;
+
+interface
+
+type
+  TEmp = class
+    FName,
+    LName: String;
+    function Tst(): string;
+    constructor New(fn, ln: string);
+  end;
+
+  TDept = class
+    Name: String;
+    constructor New(dept: string);
+  end;
+
+implementation
+
+
+{ TEmp }
+
+constructor TEmp.New(fn, ln: string);
+begin
+  FName := fn;
+  LName := ln;
+end;
+
+
+procedure TEmp.Tst;
+begin
+  Show
+end;
+
+{ TDept }
+
+constructor TDept.New(dept: string);
+begin
+  Name := dept;
+end;
+
+end.
+ 

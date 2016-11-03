@@ -40,7 +40,7 @@ object frmDBDemo: TfrmDBDemo
     Top = 400
     Width = 75
     Height = 25
-    Caption = 'Exit'
+    Caption = 'E&xit'
     TabOrder = 2
     OnClick = Button2Click
   end
@@ -69,6 +69,23 @@ object frmDBDemo: TfrmDBDemo
       TabOrder = 1
       OnClick = Button4Click
     end
+    object Edit1: TEdit
+      Left = 16
+      Top = 72
+      Width = 121
+      Height = 21
+      TabOrder = 2
+      Text = 'Edit1'
+    end
+    object Button5: TButton
+      Left = 144
+      Top = 72
+      Width = 75
+      Height = 25
+      Caption = 'Filter'
+      TabOrder = 3
+      OnClick = Button5Click
+    end
   end
   object Database1: TDatabase
     AliasName = 'DBDEMOS'
@@ -81,10 +98,18 @@ object frmDBDemo: TfrmDBDemo
     DatabaseName = 'Database1'
     SQL.Strings = (
       'select *'
-      'from'
-      '  animals')
+      ' from'
+      '  employee'
+      'where lastname like :p')
     Left = 120
     Top = 64
+    ParamData = <
+      item
+        DataType = ftString
+        Name = 'p'
+        ParamType = ptInput
+        Value = '%'
+      end>
   end
   object Table1: TTable
     DatabaseName = 'Database1'

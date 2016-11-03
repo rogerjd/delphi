@@ -13,10 +13,14 @@ type
     Database1: TMenuItem;
     Exit1: TMenuItem;
     hreading1: TMenuItem;
-    ListStrList1: TMenuItem;
+    DataStructs: TMenuItem;
+    Interface1: TMenuItem;
+    mniForm: TMenuItem;
     procedure Database1Click(Sender: TObject);
     procedure Exit1Click(Sender: TObject);
-    procedure ListStrList1Click(Sender: TObject);
+    procedure DataStructsClick(Sender: TObject);
+    procedure Interface1Click(Sender: TObject);
+    procedure mniFormClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,7 +33,7 @@ var
 implementation
 
 uses
-   DBDemo, frmDataStructs;
+   DBDemo, frmDataStructs, frmIntfU, frmDemoUnit;
 
 {$R *.dfm}
 
@@ -47,11 +51,30 @@ begin
   Close();
 end;
 
-procedure TfrmMain.ListStrList1Click(Sender: TObject);
+procedure TfrmMain.DataStructsClick(Sender: TObject);
 begin
   Form1 := TForm1.Create(nil);
   Form1.ShowModal();
   Form1.Free();
+end;
+
+procedure TfrmMain.Interface1Click(Sender: TObject);
+begin
+  frmIntf := TfrmIntf.Create(nil);
+  frmIntf.ShowModal();
+  frmIntf.Free();
+end;
+
+procedure TfrmMain.mniFormClick(Sender: TObject);
+var
+  frm: TfrmDemo;
+begin
+  frm := TfrmDemo.Create(nil);
+  try
+    frm.ShowModal();
+  finally
+    frm.Free();
+  end;
 end;
 
 end.
